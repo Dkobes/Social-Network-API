@@ -11,7 +11,7 @@
 Allows users to create reactions to their friends thoughts. Allows to update thoughts, create, or delete. Allows a friends list that makes sure to not include any duplicates.
 
 ## Installation
-Run npm install for any dependencies. Optional: npm run seed to populate database with mock data.
+Run npm install for any dependencies
 
 ## Usage
 npm run start to start the server. You can then use the routes, and manages users, thoughts, and reactions as you please.
