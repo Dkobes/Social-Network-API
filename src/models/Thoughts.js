@@ -1,32 +1,39 @@
-import {mongoose} from 'mongoose';
+import mongoose from 'mongoose';
 
 const reactionSchema = new mongoose.Schema({
-    userId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      required: true,
-    },
-    thoughts: [
-      {
-        content: { type: String, required: true }, 
-        timestamp: { type: Date, default: Date.now }, 
-        reactions: [
-          {
-            userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, 
-            type: { type: String, enum: ['like', 'love', 'laugh', 'angry', 'sad'], default: 'like' }, 
-            timestamp: { type: Date, default: Date.now }, 
-          },
-        ],
-      },
-    ],
-    friendsList: [
-      {
-        friendId: { type: mongoose.Schema.Types.ObjectId, ref: 'User' }, 
-        addedAt: { type: Date, default: Date.now }, 
-      },
-    ],
-  });
+  reactionBody: {
+    type: String,
+    required: true,
+    maxlength: 280,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
 
-  const Reaction = mongoose.model('Reaction', reactionSchema);
+const thoughtSchema = new mongoose.Schema({
+  thoughtText: {
+    type: String,
+    required: true,
+    minlength: 1,
+    maxlength: 280,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  reactions: [reactionSchema],
+});
 
-  export default Reaction;
+const Thought = mongoose.model('Thought', thoughtSchema);
+
+export default Thought;
