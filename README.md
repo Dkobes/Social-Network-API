@@ -15,6 +15,7 @@ Run npm install for any dependencies
 
 ## Usage
 npm run start to start the server. You can then use the routes, and manages users, thoughts, and reactions as you please.
+Heres a video showing its use https://drive.google.com/file/d/1FqBAy-nQGIw-HpsSfoEu0ZFTBO1Ujjki/view
 
 ## Collaborator
 Collaborator with fellow cohort, Xpert Learning AI, or Copilot when stuck on what commands to use for functions
