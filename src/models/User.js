@@ -20,7 +20,7 @@ const userSchema = new mongoose.Schema({
         ref: 'Reaction',
     },
 ],
-    fiends : [{
+    friends : [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'USer',
     },
