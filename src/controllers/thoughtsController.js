@@ -1,5 +1,5 @@
-import Thought from '../models/Thoughts';
-import User from '../models/User';
+import Thought from '../models/Thoughts.js';
+import User from '../models/User.js';
 
 export const getThoughts = async (req, res) => {
     try {
