@@ -1,9 +1,9 @@
 import { Router } from 'express';
 const router = Router();
-import thoughtRoutes from './thoughtRoutes.js';
-import userRoutes from './userRoutes.js';
+import thoughtsRoute from './thoughtsRoute.js';
+import userRoute from './userRoute.js';
 
-router.use('/thoughts', thoughtRoutes);
-router.use('/users', userRoutes);
+router.use('/thoughts', thoughtsRoute);
+router.use('/users', userRoute);
 
 export default router;
